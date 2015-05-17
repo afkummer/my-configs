@@ -10,11 +10,11 @@ alias linux02_sftp="sftp linux02"
 alias oca="ssh oca.ctism.ufsm.br -p 2274"
 alias oca_sftp="sftp -oPort=2274 oca.ctism.ufsm.br"
 
-alias zig1="ssh zig1"
+alias zig1="ssh -p 2274 zig1"
 alias zig1_sftp="sftp -oPort=2274 zig1"
 
-alias zig1="ssh zig2"
-alias zig1_sftp="sftp -oPort=2274 zig2"
+alias zig2="ssh -p 2274 zig2"
+alias zig2_sftp="sftp -oPort=2274 zig2"
 
 alias blade="ssh blade01.proj.ufsm.br"
 alias blade_sftp="sftp blade01.proj.ufsm.br"

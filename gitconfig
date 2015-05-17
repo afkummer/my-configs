@@ -1,0 +1,18 @@
+[user]
+	email = alberto@inf.ufsm.br
+	name = alberto
+[push]
+	default = matching
+[credential]
+	helper = cache --timeout=7200
+[merge]
+	ff = false
+[http]
+	sslVerify = false
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[core]
+	editor = vim

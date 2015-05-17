@@ -1,6 +1,12 @@
 alias inf="ssh ssh.inf.ufsm.br"
 alias inf_sftp="sftp ssh.inf.ufsm.br"
 
+alias linux01="ssh linux01"
+alias linux01_sftp="sftp linux01"
+
+alias linux02="ssh linux02"
+alias linux02_sftp="sftp linux02"
+
 alias oca="ssh oca.ctism.ufsm.br -p 2274"
 alias oca_sftp="sftp -oPort=2274 oca.ctism.ufsm.br"
 

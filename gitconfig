@@ -7,8 +7,12 @@
 	helper = cache --timeout=7200
 [merge]
 	ff = false
-[http]
-	sslVerify = false
+
+# Isso era usado quando o OCA tinha um servidor Gitlab com certificado
+# self-signed.
+#[http]
+#	sslVerify = false
+
 [alias]
 	co = checkout
 	br = branch

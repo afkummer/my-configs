@@ -85,5 +85,3 @@ set t_Co=256
 " Protege a expansão de \t quando edita um makefile.
 autocmd FileType make setlocal noexpandtab
 
-" Define a cor do VI.
-colorscheme slate

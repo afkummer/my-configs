@@ -33,7 +33,7 @@ endfunction
 " Alterna entre .h e .cpp
 noremap <F4> :call ToggleHeaderCpp()<cr>
 
-" Shortcut to close everything with SHITF+S
+" Shortcut to close everything with SHITF+Q
 noremap <S-Q> :qa!<cr>
 
 " Load extra plugins for specific file types

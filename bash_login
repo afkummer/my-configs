@@ -1,5 +1,0 @@
-# Em algumas máquinas, é necessário incluir o bashrc no braço...
-
-if [ -f ~/.bashrc ]; then
-   . ~/.bashrc
-fi

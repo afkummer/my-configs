@@ -85,3 +85,27 @@ set t_Co=256
 " Protege a expansão de \t quando edita um makefile.
 autocmd FileType make setlocal noexpandtab
 
+" Destaca espaços extras à direita
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+" Better completion
+set completeopt+=longest,menuone,preview
+
+" Show line numbers
+set number
+
+" Usa duas linhas como status (facilita na identificação dos buffers).
+set laststatus=2
+
+" Auxiliar para fazer operaçoes com tabs.
+nmap . :tabn<cr>
+nmap , :tabp<cr>
+nmap l :tabnew<cr>
+
+" Faz merge das linhas adjacentes, e reformata o texto em 80 colunas.
+" Linhas em branco delimitam parágrafos. Comandos alternativos são
+" - gqq - opera sobre a linha até o '\n'
+" - gq} - opera em todas as linhas adjacentes até encontrar uma em branco
+map <S-W> :set tw=80<cr><bar>gq}<bar>:set tw=0<cr>
+

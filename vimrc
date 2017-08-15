@@ -103,3 +103,9 @@ nmap . :tabn<cr>
 nmap , :tabp<cr>
 nmap l :tabnew<cr>
 
+" Faz merge das linhas adjacentes, e reformata o texto em 80 colunas.
+" Linhas em branco delimitam parágrafos. Comandos alternativos são
+" - gqq - opera sobre a linha até o '\n'
+" - gq} - opera em todas as linhas adjacentes até encontrar uma em branco
+map <S-W> :set tw=80<cr><bar>gq}<bar>:set tw=0<cr>
+

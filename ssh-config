@@ -1,0 +1,58 @@
+#
+# General config to keep SSH connection lightweight.
+# 
+Host *
+  Compression no
+  CompressionLevel 0
+
+# Home network machines
+Host hn2pi.home
+   Hostname 192.168.1.250
+
+#
+# SSH Inf-UFSM machines.
+#
+Host ssh.inf.ufsm.br
+   ServerAliveInterval 30
+
+Host lsc4.inf.ufsm.br
+   Hostname lsc4.inf.ufsm.br
+   ProxyCommand ssh ssh.inf.ufsm.br -W %h:%p
+
+Host lsc5.inf.ufsm.br
+   Hostname lsc5.inf.ufsm.br
+   ProxyCommand ssh ssh.inf.ufsm.br -W %h:%p
+
+#
+# Config for VM on localhost.
+# Desliga a verificação de hash para VMs.
+#
+Host localhost  127.0.0.1
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+
+#
+# Internal machines of CTISM.
+#
+Host otz01.ctism
+   Hostname otz01
+   ProxyCommand ssh oca.ctism.ufsm.br -W %h:%p
+
+#
+# Internal machines of INF/PPGC.
+#
+Host ifrit
+   Hostname 143.54.12.42
+
+Host shiva
+   Hostname 143.54.12.24
+
+Host tiamat0
+   Hostname 143.54.12.136
+
+Host tiamat1
+   Hostname 143.54.12.125
+
+Host tiamat2
+   Hostname 143.54.12.176
+

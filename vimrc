@@ -99,9 +99,9 @@ set number
 set laststatus=2
 
 " Auxiliar para fazer operaçoes com tabs.
-nmap . :tabn<cr>
-nmap , :tabp<cr>
-nmap l :tabnew<cr>
+" nmap . :tabn<cr>
+" nmap , :tabp<cr>
+" nmap l :tabnew<cr>
 
 " Faz merge das linhas adjacentes, e reformata o texto em 80 colunas.
 " Linhas em branco delimitam parágrafos. Comandos alternativos são

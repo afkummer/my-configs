@@ -3,6 +3,6 @@ if [ -d $HOME/.local/bin ]
 then
    export PATH=$HOME/.local/bin:$PATH
 fi
-ZSH_THEME="maran"
+ZSH_THEME="evan"
 unsetopt sharehistory
 alias xo=xdg-open

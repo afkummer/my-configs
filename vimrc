@@ -112,3 +112,5 @@ map <S-W> :set tw=80<cr><bar>gq}<bar>:set tw=0<cr>
 " Mostra as teclas do buffer de comando próximo a barra de status do VIM.
 set showcmd
 
+" Evita que o vim procure por headers da boost.
+set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!

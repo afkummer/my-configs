@@ -114,3 +114,7 @@ set showcmd
 
 " Evita que o vim procure por headers da boost.
 set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!
+
+set nomodeline
+"syntax off
+set background=light

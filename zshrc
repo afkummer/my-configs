@@ -6,3 +6,5 @@ fi
 ZSH_THEME="evan"
 unsetopt sharehistory
 alias xo=xdg-open
+alias zimpl="zimpl -l100 "
+

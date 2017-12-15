@@ -7,5 +7,7 @@ ZSH_THEME="evan"
 unsetopt sharehistory
 alias xo=xdg-open
 alias zimpl="zimpl -l100 "
-alias kl="tput reset"
+
+# Ajusta o CTRL+L para o reset.
+bindkey -s '^L' 'tput reset\n'
 

@@ -21,3 +21,4 @@
    dh = diff HEAD
 [core]
 	editor = vim
+	excludesfile = /home/alberto/.gitignore_global

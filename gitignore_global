@@ -1,0 +1,19 @@
+# LaTeX files
+*.aux
+*.log
+*.toc
+*.bbl
+*.run.xml
+*.out
+*.bcf
+*.blg
+
+# Object files (C and C++ projects)
+*.o
+
+# Java bytecode
+*.class
+
+# Python "bytecode"
+*.pyc
+

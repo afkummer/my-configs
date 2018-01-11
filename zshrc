@@ -9,10 +9,10 @@ alias xo=xdg-open
 alias zimpl="zimpl -l100 "
 
 # Ajusta o CTRL+L para o reset.
-kummerClearReset() {
-   tput reset
-   zle reset-prompt
-}
-zle -N kummerClearReset
-bindkey '^K' kummerClearReset
+# kummerClearReset() {
+#    tput reset
+#    zle reset-prompt
+# }
+# zle -N kummerClearReset
+# bindkey '^K' kummerClearReset
 

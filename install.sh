@@ -28,4 +28,6 @@ cp -v tmux.conf ~/.tmux.conf
 cp -v vimrc ~/.vimrc
 cp -v gitignore_global ~/.gitignore_global
 
+cp -v Rprofile ~/.Rprofile
+
 

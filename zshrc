@@ -7,5 +7,6 @@ ZSH_THEME="evan"
 unsetopt sharehistory
 alias xo=xdg-open
 alias zimpl="zimpl -l100 "
-alias pdflatex=pdflatex -interaction=nonstopmode
+alias pdflatex="pdflatex -interaction=nonstopmode "
+alias make="make -j4 "
 

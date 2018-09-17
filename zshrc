@@ -9,4 +9,5 @@ alias xo=xdg-open
 alias zimpl="zimpl -l100 "
 alias pdflatex="pdflatex -interaction=nonstopmode "
 alias make="make -j4 "
+alias latexmk="latexmk -bibtex -pdf -pdflatex=\"pdflatex -interaction=nonstopmode\""
 

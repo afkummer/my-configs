@@ -14,20 +14,11 @@ Host otz01.ctism
    ProxyCommand ssh oca.ctism.ufsm.br -W %h:%p
 
 #
-# Internal machines of INF/PPGC.
+# Internal machines of INF.UFRGS
 #
-Host ifrit
-   Hostname 143.54.12.42
+Host hn3.ufrgs
+   Hostname hn3
+   ProxyCommand ssh afkneto@portal.inf.ufrgs.br -W %h:%p
 
-Host shiva
-   Hostname 143.54.12.24
 
-Host tiamat0
-   Hostname 143.54.12.136
-
-Host tiamat1
-   Hostname 143.54.12.125
-
-Host tiamat2
-   Hostname 143.54.12.176
 

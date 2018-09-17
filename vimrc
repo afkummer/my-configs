@@ -71,10 +71,9 @@ set noswapfile
 " Evita o blink em alguns emuladores de VT-8 (como o Terminator).
 set novb
 
-" Ativa o suporte a C++ 2011.
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-
-set modeline
+" Desliga a interpretação da linha do arquivo com dados acerca da
+" formatação do utilizada (indentação, etc.).
+set nomodeline
 
 " Ajusta a indentação usada em python.
 au FileType python setl sw=3 sts=3 et
@@ -86,8 +85,8 @@ set t_Co=256
 autocmd FileType make setlocal noexpandtab
 
 " Destaca espaços extras à direita
-"highlight ExtraWhitespace ctermbg=red guibg=red
-"match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " Better completion
 set completeopt+=longest,menuone,preview
@@ -112,9 +111,9 @@ map <S-W> :set tw=80<cr><bar>gq}<bar>:set tw=0<cr>
 " Evita que o vim procure por headers da boost.
 set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!
 
-set nomodeline
 "syntax off
-set background=light
+"set background=light
+set wildmenu
 
 " Configura a animação de brackets matching
 set showmatch

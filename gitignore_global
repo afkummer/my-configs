@@ -9,6 +9,8 @@
 *.blg
 *.nav
 *.snm
+*.fdb_latexmk
+*.fls
 
 # Object files (C and C++ projects)
 *.o

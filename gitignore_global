@@ -21,3 +21,6 @@
 # Python "bytecode"
 *.pyc
 
+# Linear programming temporaries.
+*.lp
+*.tbl

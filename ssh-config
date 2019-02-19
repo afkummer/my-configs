@@ -1,4 +1,11 @@
-#
+# Default connection config
+Host *
+   ForwardX11 yes
+   ForwardX11Trusted yes
+   ServerAliveCountMax 30
+   ServerAliveInterval 10
+
+
 # Config for VM on localhost.
 # Desliga a verificação de hash para VMs.
 #
@@ -21,4 +28,7 @@ Host hn3.ufrgs
    ProxyCommand ssh afkneto@portal.inf.ufrgs.br -W %h:%p
 
 
+Host hn2.ufrgs
+   Hostname hn2
+   ProxyCommand ssh afkneto@portal.inf.ufrgs.br -W %h:%p
 

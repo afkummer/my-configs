@@ -33,7 +33,7 @@ endfunction
 " Alterna entre .h e .cpp
 noremap <F4> :call ToggleHeaderCpp()<cr>
 
-" Shortcut to close everything with SHITF+Q
+" Shortcut to close everything with SHIFT+Q
 noremap <S-Q> :qa!<cr>
 
 " Load extra plugins for specific file types
@@ -85,8 +85,8 @@ set t_Co=256
 autocmd FileType make setlocal noexpandtab
 
 " Destaca espaços extras à direita
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\s\+$/
 
 " Better completion
 set completeopt+=longest,menuone,preview

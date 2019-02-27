@@ -4,6 +4,7 @@ Host *
    ForwardX11Trusted yes
    ServerAliveCountMax 30
    ServerAliveInterval 10
+   Compression yes
 
 
 # Config for VM on localhost.

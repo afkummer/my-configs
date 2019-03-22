@@ -33,3 +33,6 @@ Host hn2.ufrgs
    Hostname hn2
    ProxyCommand ssh afkneto@portal.inf.ufrgs.br -W %h:%p
 
+Host portal
+   Hostname portal.inf.ufrgs.br
+   User afkneto

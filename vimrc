@@ -121,3 +121,4 @@ set matchtime=3
 
 " Faz o VIM entender que a sintaxe do AMPL serve para o MathProg.
 autocmd BufRead,BufNewFile *.mod set filetype=ampl
+

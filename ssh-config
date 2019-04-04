@@ -4,6 +4,7 @@ Host *
    ForwardX11Trusted yes
    ServerAliveCountMax 30
    ServerAliveInterval 10
+   Compression yes
 
 
 # Config for VM on localhost.
@@ -32,3 +33,6 @@ Host hn2.ufrgs
    Hostname hn2
    ProxyCommand ssh afkneto@portal.inf.ufrgs.br -W %h:%p
 
+Host portal
+   Hostname portal.inf.ufrgs.br
+   User afkneto

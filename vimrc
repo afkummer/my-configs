@@ -1,9 +1,13 @@
+" No vi compatibility
+set nocp
+
 " Adjust indentation
 set expandtab
 set tabstop=3
 set softtabstop=3
 set shiftwidth=3
 set autoindent
+set shiftround
 
 " Make backspaces more powerfull
 set backspace=indent,eol,start
@@ -12,11 +16,9 @@ set backspace=indent,eol,start
 syntax on            " syntax highlighting
 set showcmd          " show (partial) command in status line
 
-" No vi compatibility
-set nocp
-
 " Remember cursor positioning
-au BufReadPost * if line("'\"")|execute("normal `\"")|endif
+" This version fix the warning of "line beyond end-of-file"
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
 " Ignore case on search
 set ic
@@ -54,10 +56,12 @@ set history=1000
 set undolevels=1000
 
 " Diz para o VIM ignorar alguns arquivos autocriados.
+set wildmenu
 set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildmode=list:longest,full
 
 " Altera o título do terminal. Ajuda quando tem várias janelas abertas.
-"set title
+set title
 
 " Aviso visual em vez de tocar um som.
 set visualbell
@@ -113,7 +117,6 @@ set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!
 
 "syntax off
 "set background=light
-set wildmenu
 
 " Configura a animação de brackets matching
 set showmatch
@@ -121,4 +124,21 @@ set matchtime=3
 
 " Faz o VIM entender que a sintaxe do AMPL serve para o MathProg.
 autocmd BufRead,BufNewFile *.mod set filetype=ampl
+
+" Adiciona maior funcionalidade ao matching com %.
+set matchpairs+=<:>
+
+" Permite que a seleçao em bloco avance em espacos vazios.
+set virtualedit=block
+
+" Ajeita o posicionamento do cursor quando faz split da janela.
+set splitbelow
+set splitright
+
+" Usa a tecla espaço para remover highlighting da busca.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Navegação mais simples em linhas longas com JK
+nnoremap <C-j> gj
+nnoremap <C-k> gk
 

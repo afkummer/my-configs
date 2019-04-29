@@ -24,7 +24,7 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 set ic
 
 " Autowrite when changing file
-set autowrite
+" set autowrite
 
 " Função para alternar entre um header e um cpp
 " Já salva o arquivo antes
@@ -67,10 +67,6 @@ set title
 set visualbell
 set noerrorbells
 
-" Não cria arquivos de troca.
-set nobackup
-set noswapfile
-
 " Desliga alerta visual.
 " Evita o blink em alguns emuladores de VT-8 (como o Terminator).
 set novb
@@ -81,9 +77,6 @@ set nomodeline
 
 " Ajusta a indentação usada em python.
 au FileType python setl sw=3 sts=3 et
-
-" Diz para o VIM que o terminal é multicolor.
-set t_Co=256
 
 " Protege a expansão de \t quando edita um makefile.
 autocmd FileType make setlocal noexpandtab
@@ -124,9 +117,6 @@ set matchtime=3
 
 " Faz o VIM entender que a sintaxe do AMPL serve para o MathProg.
 autocmd BufRead,BufNewFile *.mod set filetype=ampl
-
-" Adiciona maior funcionalidade ao matching com %.
-set matchpairs+=<:>
 
 " Permite que a seleçao em bloco avance em espacos vazios.
 set virtualedit=block

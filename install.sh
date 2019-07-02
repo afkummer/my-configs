@@ -26,4 +26,7 @@ cp -v Rprofile ~/.Rprofile
 cp -v latexmkrc ~/.latexmkrc
 
 
+mkdir -p ~/.local/bin
+cp -v querysrv ~/.local/bin 
 
+cp -v kill-ssh-agent ~/.config/autostart-scripts/

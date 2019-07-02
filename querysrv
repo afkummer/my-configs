@@ -1,0 +1,13 @@
+#!/bin/bash
+
+declare -a servers
+
+servers=( tiamat0 tiamat1 tiamat2 shiva ifrit malboro )
+
+for srv in "${servers[@]}"
+do
+   printf "%s Running command on server %s\n" "--" $srv
+   ssh $srv $@
+   printf "\n\n"
+done
+

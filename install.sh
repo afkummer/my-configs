@@ -13,6 +13,7 @@ if [ ! -d ~/.oh-my-zsh ]
 then
    echo ">>> Precisa instalar o OH MY ZSH!"
 else
+   cp -v my-shutils ~/.my-shutils
    cat zshrc >> ~/.zshrc
    vim ~/.zshrc
 fi

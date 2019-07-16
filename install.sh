@@ -25,7 +25,7 @@ cp -v vimrc ~/.vimrc
 cp -v gitignore_global ~/.gitignore_global
 cp -v Rprofile ~/.Rprofile
 cp -v latexmkrc ~/.latexmkrc
-
+cp -v Xresources ~/.Xresources
 
 mkdir -p ~/.local/bin
 cp -v querysrv ~/.local/bin 

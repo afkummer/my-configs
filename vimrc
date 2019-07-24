@@ -8,9 +8,10 @@ set softtabstop=3
 set shiftwidth=3
 set autoindent
 set shiftround
+set smartindent
 
 " Make backspaces more powerfull
-set backspace=indent,eol,start
+set backspace=eol,start,indent
 
 " Enable some syntax helpers.
 syntax on            " syntax highlighting
@@ -132,3 +133,9 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 nnoremap <C-j> gj
 nnoremap <C-k> gk
 
+" Transforma o backspace do modo normal em shortcut para o registrador
+" blackhole.
+nnoremap <BS> "_
+
+set t_Co=256
+set so=7

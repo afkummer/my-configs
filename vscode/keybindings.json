@@ -2,11 +2,13 @@
 [
    {
       "key": "alt+1",
-      "command": "latex-workshop.build"
+      "command": "latex-workshop.build",
+      "when": "editorLangId == 'latex'"
    },
    {
       "key": "alt+2",
-      "command": "latex-workshop.clean"
+      "command": "latex-workshop.clean",
+      "when": "editorLangId == 'latex'"
    },
    {
       "key": "ctrl+alt+b",
@@ -42,6 +44,47 @@
    },
    {
       "key": "alt+7",
-      "command": "latex-workshop.tab"
+      "command": "latex-workshop.tab",
+      "when": "editorLangId == 'latex'"
+   },
+   {
+      "key": "shift+alt+i",
+      "command": "latex-workshop.shortcut.textit",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+l ctrl+i",
+      "command": "-latex-workshop.shortcut.textit",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "shift+alt+s",
+      "command": "latex-workshop.shortcut.textsc",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+l ctrl+c",
+      "command": "-latex-workshop.shortcut.textsc",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "shift+alt+t",
+      "command": "latex-workshop.shortcut.texttt",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+l ctrl+t",
+      "command": "-latex-workshop.shortcut.texttt",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "shift+alt+b",
+      "command": "latex-workshop.shortcut.textbf",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+l ctrl+b",
+      "command": "-latex-workshop.shortcut.textbf",
+      "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
    }
 ]

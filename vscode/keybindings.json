@@ -1,0 +1,47 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+   {
+      "key": "alt+1",
+      "command": "latex-workshop.build"
+   },
+   {
+      "key": "alt+2",
+      "command": "latex-workshop.clean"
+   },
+   {
+      "key": "ctrl+alt+b",
+      "command": "-latex-workshop.build",
+      "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+l alt+b",
+      "command": "-latex-workshop.build",
+      "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+l alt+v",
+      "command": "-latex-workshop.view",
+      "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+alt+v",
+      "command": "-latex-workshop.view",
+      "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+   },
+   {
+      "key": "alt+7",
+      "command": "-workbench.action.openEditorAtIndex7"
+   },
+   {
+      "key": "alt+1",
+      "command": "-workbench.action.openEditorAtIndex1"
+   },
+   {
+      "key": "alt+2",
+      "command": "-workbench.action.openEditorAtIndex2"
+   },
+   {
+      "key": "alt+7",
+      "command": "latex-workshop.tab"
+   }
+]

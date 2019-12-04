@@ -86,5 +86,32 @@
       "key": "ctrl+l ctrl+b",
       "command": "-latex-workshop.shortcut.textbf",
       "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+   },
+   {
+      "key": "ctrl+shift+`",
+      "command": "workbench.action.terminal.toggleTerminal"
+   },
+   {
+      "key": "ctrl+`",
+      "command": "-workbench.action.terminal.toggleTerminal"
+   },
+   {
+      "key": "ctrl+shift+`",
+      "command": "-workbench.action.terminal.new"
+   },
+   {
+      "key": "ctrl+shift+k",
+      "command": "workbench.action.terminal.clear",
+      "when": "terminalFocus"
+   },
+   {
+      "key": "ctrl+shift+k",
+      "command": "-editor.action.deleteLines",
+      "when": "textInputFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+shift+k",
+      "command": "-r.knitRmd",
+      "when": "editorTextFocus && editorLangId == 'rmd'"
    }
 ]

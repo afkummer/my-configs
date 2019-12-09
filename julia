@@ -1,0 +1,8 @@
+#!/usr/bin/env julia
+
+using Revise
+push!(LOAD_PATH, ".")
+
+print("\n                       |  Revise module loaded.")
+print("\n                       |  pwd() added to LOAD_PATH.")
+print("\n                       |")

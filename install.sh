@@ -33,3 +33,7 @@ cp -v querysrv ~/.local/bin
 cp -v kill-ssh-agent ~/.config/autostart-scripts/
 
 vim amsmath.vba
+
+mkdir ~/.julia
+cp -av julia/* ~/.julia
+

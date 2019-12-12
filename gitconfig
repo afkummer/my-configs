@@ -4,7 +4,7 @@
 [push]
 	default = matching
 [credential]
-	helper = cache --timeout=7200
+	helper = cache --timeout=72000
 [merge]
 	ff = false
 
@@ -19,6 +19,11 @@
 	ci = commit
 	st = status
    dh = diff HEAD
+   l = log --graph --format=format:'%C(auto)%h%d %s - %C(blue)%an%C(reset), %ar'
 [core]
 	editor = vim
 	excludesfile = /home/alberto/.gitignore_global
+
+[color]
+   ui = true
+

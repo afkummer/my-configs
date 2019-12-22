@@ -116,7 +116,11 @@ au FileType python setl sw=3 sts=3 et
 " au FileType julia setl sw=4 sts=4 et
 
 " Protege a expansão de \t quando edita um makefile.
-autocmd FileType make setlocal noexpandtab
+autocmd FileType make setl noexpandtab sw=8
+
+
+" Little lie to make VIM show all its colors.
+set t_Co=256
 
 
 "

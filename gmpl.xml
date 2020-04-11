@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="AMPL/GMPL" section="Scientific"
+          version="1.0" kateversion="3.6.0"
+          indenter="cstyle"
+          extensions="*.mod; *.dat"
+	  priority="10">
+<!--
+##########################################################################
+##  Besoa Rabenasolo (besoa.rabenasolo@online.fr)
+##
+## Inspired from cpp.xml)
+##########################################################################
+-->
+  <highlighting>
+    <list name="reservedkeywords">
+      <item> and </item>
+      <item> by </item>
+      <item> cross </item>
+      <item> diff </item>
+      <item> div </item>
+      <item> else </item>
+      <item> if </item>
+      <item> in </item>
+      <item> inter </item>
+      <item> less </item>
+      <item> mod </item>
+      <item> not </item>
+      <item> or </item>
+      <item> symdiff </item>
+      <item> then </item>
+      <item> union </item>
+      <item> within </item>
+    </list>
+    <list name="keywords">
+      <item> default </item>
+      <item> for </item>
+      <item> setof </item>
+      <item> exists </item>
+      <item> forall </item>
+      <item> solve </item>
+      <item> table </item>
+      <item> data </item>
+      <item> check </item>
+      <item> end </item>
+      <item> sum </item>
+      <item> prod </item>
+      <item> min </item>
+      <item> max </item>
+      <item> minimize </item>
+      <item> maximize </item>
+      <item> printf </item>
+      <item> IN </item>
+      <item> OUT </item>
+<!--
+      <item> "subject to" </item>
+      <item> "s.t." </item>
+      -->
+    </list>
+    <list name="types">
+      <item> set </item>
+      <item> param </item>
+      <item> parameter </item>
+      <item> var </item>
+      <item> variable </item>
+      <item> integer </item>
+      <item> binary </item>
+      <item> symbolic </item>
+    </list>
+    <list name="functions">
+      <item> abs </item>
+      <item> atan </item>
+      <item> card </item>
+      <item> ceil </item>
+      <item> cos </item>
+      <item> exp </item>
+      <item> floor </item>
+      <item> gmtime </item>
+      <item> length </item>
+      <item> log </item>
+      <item> log10 </item>
+<!--
+      <item> max </item>
+      <item> min </item>
+      -->
+      <item> round </item>
+      <item> sin </item>
+      <item> sqrt </item>
+      <item> str2time </item>
+      <item> tan </item>
+      <item> trunc </item>
+
+      <item> Irand224 </item>
+      <item> Uniform01 </item>
+      <item> Uniform </item>
+      <item> Normal01 </item>
+      <item> Normal </item>
+
+      <item> substr </item>
+      <item> time2str </item>
+
+    </list>
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
+        <DetectSpaces />
+        <StringDetect attribute="Region Marker" context="Region Marker" String="#BEGIN" beginRegion="Region1" firstNonSpace="true" />
+        <StringDetect attribute="Region Marker" context="Region Marker" String="#END" endRegion="Region1" firstNonSpace="true" />
+        <StringDetect attribute="Keyword" context="#stay" String="subject to" firstNonSpace="true" />
+        <StringDetect attribute="Keyword" context="#stay" String="s.t." firstNonSpace="true" />
+        <keyword attribute="Keyword" context="#stay" String="reservedkeywords" />
+        <keyword attribute="Keyword" context="#stay" String="keywords" />
+        <keyword attribute="Data Type" context="#stay" String="types" />
+        <keyword attribute="Function" context="#stay" String="functions" />
+        <HlCChar attribute="Char" context="#stay"/>
+        <DetectChar attribute="String" context="String 1" char="&quot;"/>
+        <DetectChar attribute="String" context="String 2" char="'"/>
+        <DetectIdentifier />
+        <Float attribute="Float" context="#stay">
+          <AnyChar String="fF" attribute="Float" context="#stay"/>
+        </Float>
+        <HlCOct attribute="Octal" context="#stay"/>
+        <HlCHex attribute="Hex" context="#stay"/>
+        <Int attribute="Decimal" context="#stay">
+          <StringDetect attribute="Decimal" context="#stay" String="ULL" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="LUL" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="LLU" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="UL" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="LU" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="LL" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="U" insensitive="TRUE"/>
+          <StringDetect attribute="Decimal" context="#stay" String="L" insensitive="TRUE"/>
+        </Int>
+        <IncludeRules context="##Doxygen" />
+        <DetectChar attribute="Comment" context="Commentar 1" char="#"/>
+        <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+        <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
+        <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1" />
+        <AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]{|}~^&#59;"/>
+      </context>
+
+      <context attribute="String" lineEndContext="#pop" name="String 1">
+        <LineContinue attribute="String" context="#stay"/>
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="&quot;"/>
+      </context>
+
+      <context attribute="String" lineEndContext="#pop" name="String 2">
+        <LineContinue attribute="String" context="#stay"/>
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="'"/>
+      </context>
+
+      <context attribute="Region Marker" lineEndContext="#pop" name="Region Marker">
+      </context>
+
+      <context attribute="Comment" lineEndContext="#pop" name="Commentar 1">
+        <LineContinue attribute="Comment" context="#stay"/>
+        <DetectSpaces />
+<!--
+        <IncludeRules context="##Alerts" />
+	-->
+        <DetectIdentifier />
+      </context>
+
+      <context attribute="Comment" lineEndContext="#stay" name="Commentar 2">
+        <DetectSpaces />
+        <Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment"/>
+<!--
+        <IncludeRules context="##Alerts" />
+	-->
+        <DetectIdentifier />
+      </context>
+<!--
+      <context attribute="Comment" lineEndContext="#stay" name="Outscoped" >
+        <DetectSpaces />
+        <IncludeRules context="##Alerts" />
+        <DetectIdentifier />
+        <IncludeRules context="##Doxygen" />
+        <DetectChar attribute="Comment" context="Commentar 1" char="#"/>
+        <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+      </context>
+
+      <context attribute="Comment" lineEndContext="#stay" name="Outscoped intern">
+        <DetectSpaces />
+        <IncludeRules context="##Alerts" />
+        <DetectIdentifier />
+        <DetectChar attribute="String" context="String" char="&quot;"/>
+        <IncludeRules context="##Doxygen" />
+        <DetectChar attribute="Comment" context="Commentar 1" char="#"/>
+        <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+      </context>
+      -->
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text"  defStyleNum="dsNormal" spellChecking="false"/>
+      <itemData name="Keyword"      defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Function"   defStyleNum="dsKeyword" color="#0095ff" selColor="#ffffff" bold="1" italic="0" spellChecking="false"/>
+      <itemData name="Data Type"    defStyleNum="dsDataType" spellChecking="false"/>
+      <itemData name="Decimal"      defStyleNum="dsDecVal" spellChecking="false"/>
+      <itemData name="Octal"        defStyleNum="dsBaseN" spellChecking="false"/>
+      <itemData name="Hex"          defStyleNum="dsBaseN" spellChecking="false"/>
+      <itemData name="Float"        defStyleNum="dsFloat" spellChecking="false"/>
+      <itemData name="Char"         defStyleNum="dsChar" spellChecking="false"/>
+      <itemData name="String"       defStyleNum="dsString"/>
+      <itemData name="String Char"  defStyleNum="dsChar"/>
+      <itemData name="Comment"      defStyleNum="dsComment"/>
+      <itemData name="Symbol"       defStyleNum="dsNormal" spellChecking="false"/>
+      <itemData name="Preprocessor" defStyleNum="dsOthers" spellChecking="false"/>
+      <itemData name="Prep. Lib"    defStyleNum="dsOthers" spellChecking="false"/>
+      <itemData name="Region Marker" defStyleNum="dsRegionMarker" spellChecking="false"/>
+      <itemData name="Error"        defStyleNum="dsError" spellChecking="false"/>
+    </itemDatas>
+  </highlighting>
+  <general>
+    <comments>
+      <comment name="singleLine" start="#" />
+      <comment name="multiLine" start="/*" end="*/" region="Comment"/>
+    </comments>
+    <keywords casesensitive="1" />
+  </general>
+</language>

@@ -1,10 +1,9 @@
 
-
 #
 # Configurações provenientes do my-configs
 #
 
-unsetopt sharehistory
+#unsetopt sharehistory
 
 # Carrega o conjunto de definições padrão de todos os shells
 if [ -f ~/.my-shutils ]; then

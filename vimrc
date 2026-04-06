@@ -12,7 +12,7 @@ set autoindent
 set smartindent " Can be not smart enough sometimes. Try it before deactivating.
 
 " Adjust the visual width of indentation markers.
-set tabstop=8 softtabstop=3 shiftwidth=3
+set tabstop=8 softtabstop=4 shiftwidth=4
 
 " Rounds the indentation with > and < to multiples of tabstops, shiftwidth, etc.
 set shiftround

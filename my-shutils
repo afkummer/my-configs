@@ -35,9 +35,9 @@ alias zimpl="zimpl -l100 "
 alias make="make -j4 "
 
 # Single initialization of SSH agent.
-pidof ssh-agent > /dev/null
-if [ $? -eq 1 ]; then
-   ssh-agent > ~/.ssh_agent 
-fi
-eval "$(cat ~/.ssh_agent)" > /dev/null
+# pidof ssh-agent > /dev/null
+# if [ $? -eq 1 ]; then
+#    ssh-agent > ~/.ssh_agent 
+# fi
+# eval "$(cat ~/.ssh_agent)" > /dev/null
 

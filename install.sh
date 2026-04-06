@@ -11,7 +11,7 @@ cp -v ssh-config ~/.ssh/config
 # Instala o config do ZSH 
 if [ ! -d ~/.oh-my-zsh ]
 then
-   echo ">>> Precisa instalar o OH MY ZSH!"
+   echo ">>> You'll need to install oh-my-zsh"
 else
    cp -v my-shutils ~/.my-shutils
    cat zshrc >> ~/.zshrc
@@ -27,13 +27,11 @@ cp -v Rprofile ~/.Rprofile
 cp -v latexmkrc ~/.latexmkrc
 cp -v Xresources ~/.Xresources
 
-mkdir -p ~/.local/bin
-cp -v querysrv ~/.local/bin 
-
+mkdir -p ~/.config/autostart-scripts/
 cp -v kill-ssh-agent ~/.config/autostart-scripts/
 
 vim amsmath.vba
 
-mkdir ~/.julia
-cp -av julia/* ~/.julia
+#mkdir ~/.julia
+#cp -av julia/* ~/.julia
 
